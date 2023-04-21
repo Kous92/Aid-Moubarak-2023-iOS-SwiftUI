@@ -1,0 +1,58 @@
+[
+    {
+        "message": "Assalamou Alaykoum",
+        "imageName": "EidBlueGradient",
+        "colorText": "White",
+        "shadowColor": "Gold",
+        "goldEffect": true
+    },
+    {
+        "message": "Aïd Moubarak",
+        "imageName": "MeccaClockTower1",
+        "colorText": "White",
+        "shadowColor": "Red",
+        "goldEffect": false
+    },
+    {
+        "message": "Passez une bonne fête de l'Aïd-El-Fitr avec vos proches",
+        "imageName": "MeccaClockTower2",
+        "colorText": "White",
+        "shadowColor": "Green",
+        "goldEffect": false
+    },
+    {
+        "message": "Qu'Allah ait accepté notre jeûne, nos prières et nos efforts respectifs.",
+        "imageName": "MosqueMoon",
+        "colorText": "White",
+        "shadowColor": "Blue",
+        "goldEffect": false
+    },
+    {
+        "message": "Qu'Allah nous pardonne et nous facilite pour pardonner et se réconcilier avec les personnes en mésentente",
+        "imageName": "RamadanMoon",
+        "colorText": "White",
+        "shadowColor": "Blue",
+        "goldEffect": false
+    },
+    {
+        "message": "Qu'Allah nous accorde ce que nous souhaitons si c'est un bien pour nous",
+        "imageName": "MeccaClockTower2",
+        "colorText": "White",
+        "shadowColor": "Green",
+        "goldEffect": false
+    },
+    {
+        "message": "Barakallahoufikoum (Qu'Allah vous bénisse)",
+        "imageName": "MeccaClockTower1",
+        "colorText": "white",
+        "shadowColor": "Red",
+        "goldEffect": false
+    },
+    {
+        "message": "Que la paix soit sur vous",
+        "imageName": "EidBlueGradient",
+        "colorText": "White",
+        "shadowColor": "Gold",
+        "goldEffect": true
+    }
+]
