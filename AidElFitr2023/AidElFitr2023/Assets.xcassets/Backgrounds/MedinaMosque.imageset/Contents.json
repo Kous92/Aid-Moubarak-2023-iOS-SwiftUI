@@ -1,15 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "MeccaClockTower3.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "MedinaMosque.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "MedinaMosque 1.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }

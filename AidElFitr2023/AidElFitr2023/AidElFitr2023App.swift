@@ -11,7 +11,7 @@ import SwiftUI
 struct AidElFitr2023App: App {
     var body: some Scene {
         WindowGroup {
-            EidMubarakView()
+            HomeView()
         }
     }
 }

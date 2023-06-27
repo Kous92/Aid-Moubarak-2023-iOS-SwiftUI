@@ -7,13 +7,18 @@
 
 import Foundation
 
-class EidMubarakViewModel: ObservableObject {
+final class EidMubarakViewModel: ObservableObject {
     private var mediaViewModels = [MediaViewModel]()
     private let audioPlayer = EidMubarakAudioPlayer()
-    var actualMediaIndex = 0
+    private var actualMediaIndex = 0
+    private let animationDataFileName: String
+    
+    init(animationDataFileName: String) {
+        self.animationDataFileName = animationDataFileName
+    }
     
     func initData() {
-        getMedias(with: "animationData")
+        getMedias(with: animationDataFileName)
         print(mediaViewModels)
     }
     
@@ -56,6 +61,7 @@ class EidMubarakViewModel: ObservableObject {
     }
     
     private func getMedias(with fileName: String) {
+        print("Lecture du média d'animation \(fileName).json")
         guard let fileURL = getFilePath(name: fileName) else {
             return
         }

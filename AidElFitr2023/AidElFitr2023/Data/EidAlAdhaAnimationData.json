@@ -7,49 +7,49 @@
         "goldEffect": true
     },
     {
-        "message": "Aïd Moubarak",
+        "message": "eidMubarak",
         "imageName": "MeccaClockTower1",
         "colorText": "White",
         "shadowColor": "Red",
         "goldEffect": false
     },
     {
-        "message": "Passez une bonne fête de l'Aïd-El-Fitr avec vos proches",
+        "message": "wish1Adha",
         "imageName": "MeccaClockTower2",
         "colorText": "White",
         "shadowColor": "Green",
         "goldEffect": false
     },
     {
-        "message": "Qu'Allah ait accepté notre jeûne, nos prières et nos efforts respectifs.",
-        "imageName": "MosqueMoon",
+        "message": "wish4",
+        "imageName": "MedinaMosque",
         "colorText": "White",
         "shadowColor": "Blue",
         "goldEffect": false
     },
     {
-        "message": "Qu'Allah nous pardonne et nous facilite pour pardonner et se réconcilier avec les personnes en mésentente",
-        "imageName": "RamadanMoon",
+        "message": "wish2",
+        "imageName": "MountArafat",
         "colorText": "White",
-        "shadowColor": "Blue",
+        "shadowColor": "Orange",
         "goldEffect": false
     },
     {
-        "message": "Qu'Allah nous accorde ce que nous souhaitons si c'est un bien pour nous",
+        "message": "wish5",
         "imageName": "MeccaClockTower2",
         "colorText": "White",
         "shadowColor": "Green",
         "goldEffect": false
     },
     {
-        "message": "Barakallahoufikoum (Qu'Allah vous bénisse)",
+        "message": "wish6",
         "imageName": "MeccaClockTower1",
         "colorText": "white",
         "shadowColor": "Red",
         "goldEffect": false
     },
     {
-        "message": "Que la paix soit sur vous",
+        "message": "wish7",
         "imageName": "EidBlueGradient",
         "colorText": "White",
         "shadowColor": "Gold",

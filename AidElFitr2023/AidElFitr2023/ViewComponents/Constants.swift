@@ -14,6 +14,8 @@ fileprivate func isPhone() -> Bool {
 }
 
 struct Constants {
+    static let goldenButtonHeight: CGFloat = isPhone() ? 55 : 100
+    static let goldenButtonFontSize: CGFloat = isPhone() ? 24 : 38
     static let messageFontSize: CGFloat = isPhone() ? 30 : 50
     static let messageYposition: CGFloat = isPhone() ? 80 : 120
 }

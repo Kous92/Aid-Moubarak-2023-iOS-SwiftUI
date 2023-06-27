@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct EidMubarakView: View {
+    @Environment(\.dismiss) var dismiss
+    
     // ViewModel: MVVM
-    @ObservedObject var viewModel = EidMubarakViewModel()
+    @ObservedObject var viewModel: EidMubarakViewModel
     @State private var mediaViewModel = MediaViewModel(message: "", imageName: "", colorText: "", shadowColor: "", goldEffect: false)
     
     // Propriétés texte central
@@ -36,6 +38,19 @@ struct EidMubarakView: View {
             }
             
             GeometryReader { geometry in
+                VStack(alignment: .leading) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "arrow.left")
+                            .foregroundStyle(.image(Image("GoldFoil")))
+                            .font(.system(size: 40, weight: .semibold))
+                            .glowBorder(color: .black, lineWidth: 3)
+                    }
+                }
+                .position(x: geometry.safeAreaInsets.leading + 40, y: geometry.safeAreaInsets.top - 15)
+                .zIndex(2)
+                
                 if showMainText {
                     VStack(spacing: 10) {
                         messageText()
@@ -49,7 +64,7 @@ struct EidMubarakView: View {
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
                 }
                 
-            }.zIndex(2)
+            }.zIndex(3)
         }
         .onAppear {
             viewModel.initData()
@@ -112,10 +127,10 @@ struct EidMubarakView: View {
     @ViewBuilder
     private func messageText() -> some View {
         if goldEffect {
-            Text(message)
+            Text(NSLocalizedString(message, comment: ""))
                 .foregroundStyle(.image(Image("GoldFoil")))
         } else {
-            Text(message)
+            Text(NSLocalizedString(message, comment: ""))
                 .foregroundColor(Color("White"))
         }
     }
@@ -124,17 +139,24 @@ struct EidMubarakView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            EidMubarakView()
+            EidMubarakView(viewModel: EidMubarakViewModel(animationDataFileName: "EidAlFitrAnimationData"))
                 .preferredColorScheme(.dark)
-                .previewDisplayName("Eid View (iPhone)")
+                .previewDisplayName("Eid Al Fitr View (iPhone)")
                 .previewDevice("iPhone 14 Pro")
+                .environment(\.locale, .init(identifier: "en"))
             
-            EidMubarakView()
+            EidMubarakView(viewModel: EidMubarakViewModel(animationDataFileName: "EidAlAdhaAnimationData"))
+                .preferredColorScheme(.dark)
+                .previewDisplayName("Eid Al Adha View (iPhone)")
+                .previewDevice("iPhone 14 Pro")
+                .environment(\.locale, .init(identifier: "en"))
+            
+            EidMubarakView(viewModel: EidMubarakViewModel(animationDataFileName: "EidAlFitrAnimationData"))
                 .preferredColorScheme(.dark)
                 .previewDisplayName("Eid View (iPhone SE)")
                 .previewDevice("iPhone SE (3rd generation)")
             
-            EidMubarakView()
+            EidMubarakView(viewModel: EidMubarakViewModel(animationDataFileName: "EidAlFitrAnimationData"))
                 .preferredColorScheme(.dark)
                 .previewDisplayName("Eid View (iPad)")
                 .previewDevice("iPad Pro (11-inch) (4th generation)")
