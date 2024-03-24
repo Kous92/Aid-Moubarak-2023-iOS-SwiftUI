@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  AidElFitr2023
+
+  Created by Koussaïla Ben Mamar on 27/06/2023.
+  
+*/
+"eidMubarak" = "Eid Mubarak";
+"title1" = "Eid-Al-Fitr";
+"title2" = "Eid-Al-Adha";
+"menuTitle" = "Select the animation between Eid-Al-Fitr and Eid-Al-Adha";
+"wish1" = "Have a happy Eid-Al-Fitr celebration with your loved ones.";
+"wish1Adha" = "Have a happy Eid-Al-Adha celebration with your loved ones.";
+"wish2" = "May Allah make it easy for us in the hardships and in the difficult times.";
+"wish3" = "May Allah accept our fasting, our prayers and our respective efforts.";
+"wish4" = "May Allah forgive us and facilitate us to forgive and reconcile with people in disagreement.";
+"wish5" = "May Allah grant us what we wish if it is good for us.";
+"wish6" = "Barakallahoufikoum (God bless you).";
+"wish7" = "Peace be with you";

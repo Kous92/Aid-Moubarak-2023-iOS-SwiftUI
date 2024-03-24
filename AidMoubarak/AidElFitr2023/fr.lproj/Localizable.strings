@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  AidElFitr2023
+
+  Created by Koussaïla Ben Mamar on 27/06/2023.
+  
+*/
+"eidMubarak" = "Aïd Moubarak";
+"title1" = "Aïd El Fitr";
+"title2" = "Aïd El Adha";
+"menuTitle" = "Choississez l'animation entre l'Aïd El Fitr et l'Aïd El Adha";
+"wish1" = "Passez une bonne fête de l'Aïd El Fitr avec vos proches.";
+"wish1Adha" = "Passez une bonne fête de l'Aïd El Adha avec vos proches.";
+"wish2" = "Qu'Allah nous facilite dans les épreuves et dans les périodes difficiles.";
+"wish3" = "Qu'Allah ait accepté notre jeûne, nos prières et nos efforts respectifs.";
+"wish4" = "Qu'Allah nous pardonne et nous facilite pour pardonner et se réconcilier avec les personnes en mésentente.";
+"wish5" = "Qu'Allah nous accorde ce que nous souhaitons si c'est un bien pour nous.";
+"wish6" = "Barakallahoufikoum (Qu'Allah vous bénisse).";
+"wish7" = "Que la paix soit sur vous.";
