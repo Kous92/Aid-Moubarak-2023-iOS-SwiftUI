@@ -23,7 +23,14 @@ final class EidMubarakViewModel: ObservableObject {
     }
     
     func playAudioMedia() {
-        audioPlayer.playMP3Media()
+        let selectedSoundName = getSelectedSoundName()
+        
+        guard !selectedSoundName.isEmpty else {
+            print("Erreur, aucun son a été sélectionné.")
+            return
+        }
+        
+        audioPlayer.playMP3Media(with: getSelectedSoundName())
     }
     
     func getActualMediaIndex() -> Int {
@@ -41,6 +48,14 @@ final class EidMubarakViewModel: ObservableObject {
         actualMediaIndex += 1
         
         return mediaViewModels[i]
+    }
+    
+    func getSelectedSoundName() -> String {
+        guard let selected = UserDefaults.standard.string(forKey: "savedSound") else {
+            return ""
+        }
+        
+        return selected
     }
     
     private func getFilePath(name: String) -> URL? {

@@ -2,57 +2,57 @@
     {
         "message": "Assalamou Alaykoum",
         "imageName": "EidBlueGradient",
-        "colorText": "White",
-        "shadowColor": "Gold",
+        "colorText": "EidWhite",
+        "shadowColor": "EidGold",
         "goldEffect": true
     },
     {
         "message": "eidMubarak",
         "imageName": "MeccaClockTower1",
-        "colorText": "White",
-        "shadowColor": "Red",
+        "colorText": "EidWhite",
+        "shadowColor": "EidRed",
         "goldEffect": false
     },
     {
         "message": "wish1",
         "imageName": "MeccaClockTower2",
-        "colorText": "White",
-        "shadowColor": "Green",
+        "colorText": "EidWhite",
+        "shadowColor": "EidGreen",
         "goldEffect": false
     },
     {
         "message": "wish3",
         "imageName": "MosqueMoon",
-        "colorText": "White",
-        "shadowColor": "Blue",
+        "colorText": "EidWhite",
+        "shadowColor": "EidBlue",
         "goldEffect": false
     },
     {
         "message": "wish4",
         "imageName": "RamadanMoon",
-        "colorText": "White",
-        "shadowColor": "Blue",
+        "colorText": "EidWhite",
+        "shadowColor": "EidBlue",
         "goldEffect": false
     },
     {
         "message": "wish5",
         "imageName": "MeccaClockTower2",
-        "colorText": "White",
-        "shadowColor": "Green",
+        "colorText": "EidWhite",
+        "shadowColor": "EidGreen",
         "goldEffect": false
     },
     {
         "message": "wish6",
         "imageName": "MeccaClockTower1",
-        "colorText": "white",
-        "shadowColor": "Red",
+        "colorText": "EidWhite",
+        "shadowColor": "EidRed",
         "goldEffect": false
     },
     {
         "message": "wish7",
         "imageName": "EidBlueGradient",
-        "colorText": "White",
-        "shadowColor": "Gold",
+        "colorText": "EidWhite",
+        "shadowColor": "EidGold",
         "goldEffect": true
     }
 ]

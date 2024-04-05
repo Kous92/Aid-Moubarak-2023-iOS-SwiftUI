@@ -16,7 +16,7 @@ struct EidButton: View {
             .frame(width: UIScreen.main.bounds.width * 0.7, height: Constants.goldenButtonHeight, alignment: .center)
             .font(.system(size: Constants.goldenButtonFontSize))
             .foregroundStyle(.image(Image("GoldFoil")))
-            .background(Color("DarkBlue"))
+            .background(Color("EidDarkBlue"))
             .cornerRadius(10)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)

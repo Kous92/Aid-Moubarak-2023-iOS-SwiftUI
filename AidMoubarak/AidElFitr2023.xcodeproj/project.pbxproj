@@ -8,10 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		4B017C2F2BAF9E3E00C971C0 /* AlAfasyTV.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B017C2E2BAF9E3E00C971C0 /* AlAfasyTV.mp3 */; };
-		4B2A290B29F1933C00622DB2 /* Tabkirat1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B2A290A29F1933C00622DB2 /* Tabkirat1.mp3 */; };
+		4B33145D2BBE139E00FA40EA /* SettingRowStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B33145C2BBE139E00FA40EA /* SettingRowStatus.swift */; };
+		4B3F46D82BB23D98006F23B9 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F46D72BB23D98006F23B9 /* SettingsViewModel.swift */; };
+		4B3F46DA2BB23DF0006F23B9 /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F46D92BB23DF0006F23B9 /* SoundViewModel.swift */; };
+		4B43D4212BB6340400F533F8 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B43D4202BB6340400F533F8 /* APIError.swift */; };
+		4B4979362BB5E46F00C20A2A /* EidAudioData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B4979352BB5E46F00C20A2A /* EidAudioData.json */; };
+		4B4979382BB5E71800C20A2A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4979372BB5E71800C20A2A /* NetworkManager.swift */; };
+		4B49793A2BB5E7B400C20A2A /* AudioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4979392BB5E7B400C20A2A /* AudioData.swift */; };
 		4B5E4BD62BB06B880004432D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E4BD52BB06B880004432D /* SettingsView.swift */; };
-		4B602D792BB0E33200A8E275 /* Al Sheikh Hashem Al Saqaf.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B602D782BB0E33200A8E275 /* Al Sheikh Hashem Al Saqaf.mp3 */; };
-		4B602D7B2BB0E39700A8E275 /* Mishary bin Rashid Al Afasy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4B602D7A2BB0E39700A8E275 /* Mishary bin Rashid Al Afasy.mp3 */; };
+		4B73781C2BB78B6200225F9A /* AudioRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B73781B2BB78B6200225F9A /* AudioRowCell.swift */; };
+		4B73781E2BB78CFD00225F9A /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B73781D2BB78CFD00225F9A /* StatefulPreviewWrapper.swift */; };
 		4B77D98D29F152090025149F /* EidAlFitrAnimationData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B77D98C29F152090025149F /* EidAlFitrAnimationData.json */; };
 		4B77D98F29F1539B0025149F /* EidMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B77D98E29F1539B0025149F /* EidMedia.swift */; };
 		4B7CA03B29EFEADB00D769AC /* AidElFitr2023App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CA03A29EFEADB00D769AC /* AidElFitr2023App.swift */; };
@@ -23,18 +29,25 @@
 		4B7CA05029F01D2500D769AC /* EidMubarakAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CA04F29F01D2500D769AC /* EidMubarakAudioPlayer.swift */; };
 		4B7CA05429F023E700D769AC /* GlowBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CA05329F023E700D769AC /* GlowBorder.swift */; };
 		4B7CA05629F0244D00D769AC /* MediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CA05529F0244D00D769AC /* MediaViewModel.swift */; };
+		4B8BE1C52BBF6B59002D3FC1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 4B8BE1C42BBF6B59002D3FC1 /* Localizable.xcstrings */; };
 		4BC20DC32A4A3770007F5313 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC20DC22A4A3770007F5313 /* HomeView.swift */; };
 		4BC20DC52A4A5371007F5313 /* EidAlAdhaAnimationData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4BC20DC42A4A5371007F5313 /* EidAlAdhaAnimationData.json */; };
 		4BC20DC72A4A5662007F5313 /* EidButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC20DC62A4A5662007F5313 /* EidButton.swift */; };
-		4BC20DCA2A4A61DC007F5313 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BC20DCC2A4A61DC007F5313 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4B017C2E2BAF9E3E00C971C0 /* AlAfasyTV.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AlAfasyTV.mp3; sourceTree = "<group>"; };
-		4B2A290A29F1933C00622DB2 /* Tabkirat1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Tabkirat1.mp3; sourceTree = "<group>"; };
+		4B33145C2BBE139E00FA40EA /* SettingRowStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowStatus.swift; sourceTree = "<group>"; };
+		4B3F46D72BB23D98006F23B9 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		4B3F46D92BB23DF0006F23B9 /* SoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
+		4B43D4202BB6340400F533F8 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		4B4979342BB5E16400C20A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4B4979352BB5E46F00C20A2A /* EidAudioData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EidAudioData.json; sourceTree = "<group>"; };
+		4B4979372BB5E71800C20A2A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4B4979392BB5E7B400C20A2A /* AudioData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioData.swift; sourceTree = "<group>"; };
 		4B5E4BD52BB06B880004432D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		4B602D782BB0E33200A8E275 /* Al Sheikh Hashem Al Saqaf.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Al Sheikh Hashem Al Saqaf.mp3"; sourceTree = "<group>"; };
-		4B602D7A2BB0E39700A8E275 /* Mishary bin Rashid Al Afasy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mishary bin Rashid Al Afasy.mp3"; sourceTree = "<group>"; };
+		4B73781B2BB78B6200225F9A /* AudioRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRowCell.swift; sourceTree = "<group>"; };
+		4B73781D2BB78CFD00225F9A /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
 		4B77D98C29F152090025149F /* EidAlFitrAnimationData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EidAlFitrAnimationData.json; sourceTree = "<group>"; };
 		4B77D98E29F1539B0025149F /* EidMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EidMedia.swift; sourceTree = "<group>"; };
 		4B7CA03729EFEADB00D769AC /* AidElFitr2023.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AidElFitr2023.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,11 +60,10 @@
 		4B7CA04F29F01D2500D769AC /* EidMubarakAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EidMubarakAudioPlayer.swift; sourceTree = "<group>"; };
 		4B7CA05329F023E700D769AC /* GlowBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowBorder.swift; sourceTree = "<group>"; };
 		4B7CA05529F0244D00D769AC /* MediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewModel.swift; sourceTree = "<group>"; };
+		4B8BE1C42BBF6B59002D3FC1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		4BC20DC22A4A3770007F5313 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4BC20DC42A4A5371007F5313 /* EidAlAdhaAnimationData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EidAlAdhaAnimationData.json; sourceTree = "<group>"; };
 		4BC20DC62A4A5662007F5313 /* EidButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EidButton.swift; sourceTree = "<group>"; };
-		4BC20DCB2A4A61DC007F5313 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4BC20DCD2A4A61F4007F5313 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +81,10 @@
 			isa = PBXGroup;
 			children = (
 				4B5E4BD52BB06B880004432D /* SettingsView.swift */,
+				4B3F46D72BB23D98006F23B9 /* SettingsViewModel.swift */,
+				4B3F46D92BB23DF0006F23B9 /* SoundViewModel.swift */,
+				4B73781B2BB78B6200225F9A /* AudioRowCell.swift */,
+				4B33145C2BBE139E00FA40EA /* SettingRowStatus.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -92,6 +108,7 @@
 		4B7CA03929EFEADB00D769AC /* AidElFitr2023 */ = {
 			isa = PBXGroup;
 			children = (
+				4B4979342BB5E16400C20A2A /* Info.plist */,
 				4B7CA05729F0248A00D769AC /* Data */,
 				4B7CA04E29F01CF500D769AC /* Audio */,
 				4B7CA04B29EFF0DD00D769AC /* MainView */,
@@ -101,7 +118,8 @@
 				4B7CA03A29EFEADB00D769AC /* AidElFitr2023App.swift */,
 				4B7CA03E29EFEADC00D769AC /* Assets.xcassets */,
 				4B7CA04029EFEADC00D769AC /* Preview Content */,
-				4BC20DCC2A4A61DC007F5313 /* Localizable.strings */,
+				4B8BE1C42BBF6B59002D3FC1 /* Localizable.xcstrings */,
+				4B73781D2BB78CFD00225F9A /* StatefulPreviewWrapper.swift */,
 			);
 			path = AidElFitr2023;
 			sourceTree = "<group>";
@@ -139,9 +157,6 @@
 			children = (
 				4B7CA04F29F01D2500D769AC /* EidMubarakAudioPlayer.swift */,
 				4B017C2E2BAF9E3E00C971C0 /* AlAfasyTV.mp3 */,
-				4B602D7A2BB0E39700A8E275 /* Mishary bin Rashid Al Afasy.mp3 */,
-				4B602D782BB0E33200A8E275 /* Al Sheikh Hashem Al Saqaf.mp3 */,
-				4B2A290A29F1933C00622DB2 /* Tabkirat1.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -152,6 +167,10 @@
 				4B77D98C29F152090025149F /* EidAlFitrAnimationData.json */,
 				4B77D98E29F1539B0025149F /* EidMedia.swift */,
 				4BC20DC42A4A5371007F5313 /* EidAlAdhaAnimationData.json */,
+				4B4979352BB5E46F00C20A2A /* EidAudioData.json */,
+				4B4979372BB5E71800C20A2A /* NetworkManager.swift */,
+				4B4979392BB5E7B400C20A2A /* AudioData.swift */,
+				4B43D4202BB6340400F533F8 /* APIError.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -224,14 +243,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B77D98D29F152090025149F /* EidAlFitrAnimationData.json in Resources */,
-				4BC20DCA2A4A61DC007F5313 /* Localizable.strings in Resources */,
 				4B017C2F2BAF9E3E00C971C0 /* AlAfasyTV.mp3 in Resources */,
-				4B602D7B2BB0E39700A8E275 /* Mishary bin Rashid Al Afasy.mp3 in Resources */,
-				4B602D792BB0E33200A8E275 /* Al Sheikh Hashem Al Saqaf.mp3 in Resources */,
+				4B4979362BB5E46F00C20A2A /* EidAudioData.json in Resources */,
+				4B8BE1C52BBF6B59002D3FC1 /* Localizable.xcstrings in Resources */,
 				4B7CA04229EFEADC00D769AC /* Preview Assets.xcassets in Resources */,
 				4BC20DC52A4A5371007F5313 /* EidAlAdhaAnimationData.json in Resources */,
 				4B7CA03F29EFEADC00D769AC /* Assets.xcassets in Resources */,
-				4B2A290B29F1933C00622DB2 /* Tabkirat1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,31 +261,27 @@
 			files = (
 				4B5E4BD62BB06B880004432D /* SettingsView.swift in Sources */,
 				4BC20DC32A4A3770007F5313 /* HomeView.swift in Sources */,
+				4B33145D2BBE139E00FA40EA /* SettingRowStatus.swift in Sources */,
 				4B7CA05429F023E700D769AC /* GlowBorder.swift in Sources */,
 				4B7CA03D29EFEADB00D769AC /* EidMubarakView.swift in Sources */,
+				4B73781C2BB78B6200225F9A /* AudioRowCell.swift in Sources */,
 				4B7CA04D29EFF12200D769AC /* EidMubarakViewModel.swift in Sources */,
 				4B77D98F29F1539B0025149F /* EidMedia.swift in Sources */,
 				4B7CA05629F0244D00D769AC /* MediaViewModel.swift in Sources */,
+				4B3F46DA2BB23DF0006F23B9 /* SoundViewModel.swift in Sources */,
 				4BC20DC72A4A5662007F5313 /* EidButton.swift in Sources */,
+				4B73781E2BB78CFD00225F9A /* StatefulPreviewWrapper.swift in Sources */,
+				4B49793A2BB5E7B400C20A2A /* AudioData.swift in Sources */,
 				4B7CA03B29EFEADB00D769AC /* AidElFitr2023App.swift in Sources */,
+				4B4979382BB5E71800C20A2A /* NetworkManager.swift in Sources */,
 				4B7CA05029F01D2500D769AC /* EidMubarakAudioPlayer.swift in Sources */,
+				4B43D4212BB6340400F533F8 /* APIError.swift in Sources */,
 				4B7CA04A29EFEFFB00D769AC /* Constants.swift in Sources */,
+				4B3F46D82BB23D98006F23B9 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		4BC20DCC2A4A61DC007F5313 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4BC20DCB2A4A61DC007F5313 /* en */,
-				4BC20DCD2A4A61F4007F5313 /* fr */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4B7CA04329EFEADC00D769AC /* Debug */ = {
@@ -325,6 +338,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -382,6 +396,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -397,22 +412,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AidElFitr2023/Preview Content\"";
 				DEVELOPMENT_TEAM = LX6HN92HPR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AidElFitr2023/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Aïd Moubarak";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kous92.AidElFitr2023;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -430,22 +446,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AidElFitr2023/Preview Content\"";
 				DEVELOPMENT_TEAM = LX6HN92HPR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AidElFitr2023/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Aïd Moubarak";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kous92.AidElFitr2023;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

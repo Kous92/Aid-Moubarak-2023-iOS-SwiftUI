@@ -1,0 +1,218 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "eidMubarak" : {
+      "comment" : "Localizable.strings\n  AidElFitr2023\n\n  Created by Koussaïla Ben Mamar on 27/06/2023.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eid Mubarak"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aïd Moubarak"
+          }
+        }
+      }
+    },
+    "menuTitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select the animation between Eid-Al-Fitr and Eid-Al-Adha"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choississez l'animation entre l'Aïd El Fitr et l'Aïd El Adha"
+          }
+        }
+      }
+    },
+    "Son du Takbir de l'Aïd" : {
+
+    },
+    "Sons disponibles" : {
+
+    },
+    "Synchronisation en cours, veuillez patienter..." : {
+
+    },
+    "title1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eid-Al-Fitr"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aïd El Fitr"
+          }
+        }
+      }
+    },
+    "title2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eid-Al-Adha"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aïd El Adha"
+          }
+        }
+      }
+    },
+    "wish1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Have a happy Eid-Al-Fitr celebration with your loved ones."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passez une bonne fête de l'Aïd El Fitr avec vos proches."
+          }
+        }
+      }
+    },
+    "wish1Adha" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Have a happy Eid-Al-Adha celebration with your loved ones."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passez une bonne fête de l'Aïd El Adha avec vos proches."
+          }
+        }
+      }
+    },
+    "wish2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "May Allah make it easy for us in the hardships and in the difficult times."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qu'Allah nous facilite dans les épreuves et dans les périodes difficiles."
+          }
+        }
+      }
+    },
+    "wish3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "May Allah accept our fasting, our prayers and our respective efforts."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qu'Allah ait accepté notre jeûne, nos prières et nos efforts respectifs."
+          }
+        }
+      }
+    },
+    "wish4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "May Allah forgive us and facilitate us to forgive and reconcile with people in disagreement."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qu'Allah nous pardonne et nous facilite pour pardonner et se réconcilier avec les personnes en mésentente."
+          }
+        }
+      }
+    },
+    "wish5" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "May Allah grant us what we wish if it is good for us."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qu'Allah nous accorde ce que nous souhaitons si c'est un bien pour nous."
+          }
+        }
+      }
+    },
+    "wish6" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Barakallahoufikoum (God bless you)."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Barakallahoufikoum (Qu'Allah vous bénisse)."
+          }
+        }
+      }
+    },
+    "wish7" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peace be with you"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Que la paix soit sur vous."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -70,7 +70,7 @@ struct HomeView: View {
                 }
                 .fullScreenCover(isPresented: $isPresentedSettings) {
                     withAnimation {
-                        SettingsView()
+                        SettingsView(viewModel: SettingsViewModel())
                     }
                 }
             }

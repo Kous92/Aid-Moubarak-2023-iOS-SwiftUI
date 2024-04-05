@@ -131,7 +131,7 @@ struct EidMubarakView: View {
                 .foregroundStyle(.image(Image("GoldFoil")))
         } else {
             Text(NSLocalizedString(message, comment: ""))
-                .foregroundColor(Color("White"))
+                .foregroundColor(Color("EidWhite"))
         }
     }
 }
