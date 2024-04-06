@@ -25,6 +25,7 @@ final class SettingsViewModel: ObservableObject {
         
         do {
             let data = try await networkManager.fetchAudioData()
+            await setDefaultAudio()
             await parseViewModels(with: data)
         } catch {
             print("ERREUR")
@@ -33,6 +34,11 @@ final class SettingsViewModel: ObservableObject {
     
     private func parseViewModels(with data: [AudioContent]) async {
         var index = 0
+        
+        // Fichier par défaut en premier
+        audioViewModels.append(SoundViewModel(id: 0, soundName: "Al Afasy TV", audioFileURL: "", audioFileName: "AlAfasyTV.mp3", fileSize: 5, isSelected: false, isDownloaded: await audioFileExists(fileName: "AlAfasyTV.mp3")))
+        
+        index += 1
         
         for audioContent in data {
             let fileName = URL(string: audioContent.audioFileURL)?.lastPathComponent ?? ""
@@ -51,9 +57,37 @@ final class SettingsViewModel: ObservableObject {
         print("Liste des sons synchronisée, \(audioViewModels.count) disponible\(audioViewModels.count > 1 ? "s" : "")")
     }
     
+    private func setDefaultAudio() async {
+        print("Chargement du fichier audio par défaut")
+        guard let url = Bundle.main.url(forResource: "AlAfasyTV", withExtension: ".mp3") else {
+            print("Erreurn le fichier par défaut n'existe pas !")
+            return
+        }
+        
+        let fileName = url.lastPathComponent
+        var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        documentsURL.appendPathComponent(fileName)
+        
+        print("Fichier par défaut \(fileName)")
+        do {
+            try FileManager.default.copyItem(at: url, to: documentsURL)
+        } catch {
+            print("Une erreur est survenue lors de la copie du fichier: \(error.localizedDescription)")
+            return
+        }
+        
+        print("Copie terminée du fichier par défaut.")
+        
+        if UserDefaults.standard.string(forKey: "savedSound") == nil {
+            // Sauvegarde ici
+            await saveChoice(with: "AlAfasyTV")
+            isSelected = 0
+        }
+    }
+    
     func downloadAudio(with viewModel: SoundViewModel) async {
         isDownloading = true
-        downloadProgress = "Vérification du fichier..."
+        downloadProgress = "\(String(localized: "checkingFile")) \(viewModel.audioFileName)"
         guard await !audioFileExists(fileName: viewModel.soundName) else {
             print("-> Pas de téléchargement à faire pour le fichier \(viewModel.soundName).mp3")
             await updateList(with: viewModel)
@@ -61,7 +95,7 @@ final class SettingsViewModel: ObservableObject {
         }
         
         do {
-            downloadProgress = "Téléchargement en cours..."
+            downloadProgress = "\(String(localized: "downloading")) \(viewModel.audioFileName)... \(String(localized: "pleaseWait"))"
             try await networkManager.downloadAudioFile(fileURL: viewModel.audioFileURL)
             await updateList(with: viewModel)
         } catch {
@@ -99,12 +133,6 @@ final class SettingsViewModel: ObservableObject {
             return
         }
         
-        /*
-        audioViewModels.forEach { audio in
-            print("\(audio.soundName) -> Playing: \(audio.isPlaying)")
-        }
-         */
-        
         for i in 0 ..< audioViewModels.count {
             if audioViewModels[i].audioFileName == viewModel.audioFileName {
                 audioViewModels[i].isPlaying = true
@@ -114,13 +142,6 @@ final class SettingsViewModel: ObservableObject {
             }
         }
         
-        /*
-        print("\nAprès\n")
-        audioViewModels.forEach { audio in
-            print("\(audio.soundName) -> Playing: \(audio.isPlaying)")
-        }
-         */
-        
         audioPlayer.playMP3Media(with: viewModel.audioFileName)
     }
     
@@ -128,9 +149,9 @@ final class SettingsViewModel: ObservableObject {
         audioPlayer.pauseMP3Media()
     }
     
-    func saveChoice(with audio: SoundViewModel) async {
-        UserDefaults.standard.set(audio.audioFileName, forKey: "savedSound")
-        print("Le son \(audio.audioFileName) a été sélectionné.")
+    func saveChoice(with audioFileName: String) async {
+        UserDefaults.standard.set(audioFileName, forKey: "savedSound")
+        print("Le son \(audioFileName) a été sélectionné.")
     }
     
     func checkIfSelected(with fileName: String) async -> Bool {

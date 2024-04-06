@@ -1,6 +1,57 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "availableSounds" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Available sounds"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sons disponibles"
+          }
+        }
+      }
+    },
+    "checkingFile" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Checking file existence"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vérification de l'existence du fichier"
+          }
+        }
+      }
+    },
+    "downloading" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downloading"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Téléchargement en cours de"
+          }
+        }
+      }
+    },
     "eidMubarak" : {
       "comment" : "Localizable.strings\n  AidElFitr2023\n\n  Created by Koussaïla Ben Mamar on 27/06/2023.",
       "localizations" : {
@@ -14,6 +65,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aïd Moubarak"
+          }
+        }
+      }
+    },
+    "eidTakbirSound" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eid takbir sound"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son du takbir de l'Aïd"
           }
         }
       }
@@ -34,14 +102,39 @@
         }
       }
     },
-    "Son du Takbir de l'Aïd" : {
-
+    "pleaseWait" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please wait."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Veuillez patienter."
+          }
+        }
+      }
     },
-    "Sons disponibles" : {
-
-    },
-    "Synchronisation en cours, veuillez patienter..." : {
-
+    "syncInProgress" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synchronizing, please wait..."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Synchronisation en cours, veuillez patienter..."
+          }
+        }
+      }
     },
     "title1" : {
       "extractionState" : "manual",
@@ -134,13 +227,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "May Allah accept our fasting, our prayers and our respective efforts."
+            "value" : "May Allah accept our fasting, our prayers and our respective efforts during the blessed month of Ramadan."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Qu'Allah ait accepté notre jeûne, nos prières et nos efforts respectifs."
+            "value" : "Qu'Allah ait accepté notre jeûne, nos prières et nos efforts respectifs durant le mois béni du Ramadan."
           }
         }
       }

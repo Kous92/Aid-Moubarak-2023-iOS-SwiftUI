@@ -12,7 +12,6 @@
 		4B3F46D82BB23D98006F23B9 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F46D72BB23D98006F23B9 /* SettingsViewModel.swift */; };
 		4B3F46DA2BB23DF0006F23B9 /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3F46D92BB23DF0006F23B9 /* SoundViewModel.swift */; };
 		4B43D4212BB6340400F533F8 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B43D4202BB6340400F533F8 /* APIError.swift */; };
-		4B4979362BB5E46F00C20A2A /* EidAudioData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B4979352BB5E46F00C20A2A /* EidAudioData.json */; };
 		4B4979382BB5E71800C20A2A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4979372BB5E71800C20A2A /* NetworkManager.swift */; };
 		4B49793A2BB5E7B400C20A2A /* AudioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4979392BB5E7B400C20A2A /* AudioData.swift */; };
 		4B5E4BD62BB06B880004432D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5E4BD52BB06B880004432D /* SettingsView.swift */; };
@@ -30,9 +29,18 @@
 		4B7CA05429F023E700D769AC /* GlowBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CA05329F023E700D769AC /* GlowBorder.swift */; };
 		4B7CA05629F0244D00D769AC /* MediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CA05529F0244D00D769AC /* MediaViewModel.swift */; };
 		4B8BE1C52BBF6B59002D3FC1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 4B8BE1C42BBF6B59002D3FC1 /* Localizable.xcstrings */; };
+		4BB5D2232BC18C6C000C8CE5 /* CacheEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5D2222BC18C6C000C8CE5 /* CacheEntry.swift */; };
+		4BB5D2252BC18C7B000C8CE5 /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5D2242BC18C7B000C8CE5 /* MemoryCache.swift */; };
+		4BB5D2272BC18C88000C8CE5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5D2262BC18C88000C8CE5 /* Cache.swift */; };
+		4BB5D2292BC18C9A000C8CE5 /* FileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5D2282BC18C9A000C8CE5 /* FileCache.swift */; };
+		4BB5D22B2BC18CB3000C8CE5 /* KeysTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5D22A2BC18CB3000C8CE5 /* KeysTracker.swift */; };
+		4BB5D22D2BC18EB5000C8CE5 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5D22C2BC18EB5000C8CE5 /* DownloadManager.swift */; };
+		4BB5D22F2BC191CF000C8CE5 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5D22E2BC191CF000C8CE5 /* UIDeviceExtension.swift */; };
+		4BB5D2312BC192BF000C8CE5 /* PositionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB5D2302BC192BF000C8CE5 /* PositionModifier.swift */; };
 		4BC20DC32A4A3770007F5313 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC20DC22A4A3770007F5313 /* HomeView.swift */; };
 		4BC20DC52A4A5371007F5313 /* EidAlAdhaAnimationData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4BC20DC42A4A5371007F5313 /* EidAlAdhaAnimationData.json */; };
 		4BC20DC72A4A5662007F5313 /* EidButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC20DC62A4A5662007F5313 /* EidButton.swift */; };
+		4BF6729A2BC0F19A005A04BE /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 4BF672992BC0DE9E005A04BE /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +50,6 @@
 		4B3F46D92BB23DF0006F23B9 /* SoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
 		4B43D4202BB6340400F533F8 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		4B4979342BB5E16400C20A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		4B4979352BB5E46F00C20A2A /* EidAudioData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EidAudioData.json; sourceTree = "<group>"; };
 		4B4979372BB5E71800C20A2A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4B4979392BB5E7B400C20A2A /* AudioData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioData.swift; sourceTree = "<group>"; };
 		4B5E4BD52BB06B880004432D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -61,9 +68,18 @@
 		4B7CA05329F023E700D769AC /* GlowBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowBorder.swift; sourceTree = "<group>"; };
 		4B7CA05529F0244D00D769AC /* MediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewModel.swift; sourceTree = "<group>"; };
 		4B8BE1C42BBF6B59002D3FC1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		4BB5D2222BC18C6C000C8CE5 /* CacheEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheEntry.swift; sourceTree = "<group>"; };
+		4BB5D2242BC18C7B000C8CE5 /* MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
+		4BB5D2262BC18C88000C8CE5 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		4BB5D2282BC18C9A000C8CE5 /* FileCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCache.swift; sourceTree = "<group>"; };
+		4BB5D22A2BC18CB3000C8CE5 /* KeysTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysTracker.swift; sourceTree = "<group>"; };
+		4BB5D22C2BC18EB5000C8CE5 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		4BB5D22E2BC191CF000C8CE5 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
+		4BB5D2302BC192BF000C8CE5 /* PositionModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionModifier.swift; sourceTree = "<group>"; };
 		4BC20DC22A4A3770007F5313 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4BC20DC42A4A5371007F5313 /* EidAlAdhaAnimationData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EidAlAdhaAnimationData.json; sourceTree = "<group>"; };
 		4BC20DC62A4A5662007F5313 /* EidButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EidButton.swift; sourceTree = "<group>"; };
+		4BF672992BC0DE9E005A04BE /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +136,7 @@
 				4B7CA04029EFEADC00D769AC /* Preview Content */,
 				4B8BE1C42BBF6B59002D3FC1 /* Localizable.xcstrings */,
 				4B73781D2BB78CFD00225F9A /* StatefulPreviewWrapper.swift */,
+				4BF672992BC0DE9E005A04BE /* PrivacyInfo.xcprivacy */,
 			);
 			path = AidElFitr2023;
 			sourceTree = "<group>";
@@ -138,6 +155,8 @@
 				4B7CA04929EFEFFB00D769AC /* Constants.swift */,
 				4B7CA05329F023E700D769AC /* GlowBorder.swift */,
 				4BC20DC62A4A5662007F5313 /* EidButton.swift */,
+				4BB5D22E2BC191CF000C8CE5 /* UIDeviceExtension.swift */,
+				4BB5D2302BC192BF000C8CE5 /* PositionModifier.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -164,15 +183,36 @@
 		4B7CA05729F0248A00D769AC /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				4BB5D2202BC18C3B000C8CE5 /* Network */,
 				4B77D98C29F152090025149F /* EidAlFitrAnimationData.json */,
 				4B77D98E29F1539B0025149F /* EidMedia.swift */,
 				4BC20DC42A4A5371007F5313 /* EidAlAdhaAnimationData.json */,
-				4B4979352BB5E46F00C20A2A /* EidAudioData.json */,
-				4B4979372BB5E71800C20A2A /* NetworkManager.swift */,
 				4B4979392BB5E7B400C20A2A /* AudioData.swift */,
-				4B43D4202BB6340400F533F8 /* APIError.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		4BB5D2202BC18C3B000C8CE5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4BB5D2212BC18C49000C8CE5 /* NetworkCache */,
+				4B43D4202BB6340400F533F8 /* APIError.swift */,
+				4B4979372BB5E71800C20A2A /* NetworkManager.swift */,
+				4BB5D22C2BC18EB5000C8CE5 /* DownloadManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4BB5D2212BC18C49000C8CE5 /* NetworkCache */ = {
+			isa = PBXGroup;
+			children = (
+				4BB5D2222BC18C6C000C8CE5 /* CacheEntry.swift */,
+				4BB5D2242BC18C7B000C8CE5 /* MemoryCache.swift */,
+				4BB5D2262BC18C88000C8CE5 /* Cache.swift */,
+				4BB5D2282BC18C9A000C8CE5 /* FileCache.swift */,
+				4BB5D22A2BC18CB3000C8CE5 /* KeysTracker.swift */,
+			);
+			path = NetworkCache;
 			sourceTree = "<group>";
 		};
 		4BC20DC12A4A3761007F5313 /* Home */ = {
@@ -244,10 +284,10 @@
 			files = (
 				4B77D98D29F152090025149F /* EidAlFitrAnimationData.json in Resources */,
 				4B017C2F2BAF9E3E00C971C0 /* AlAfasyTV.mp3 in Resources */,
-				4B4979362BB5E46F00C20A2A /* EidAudioData.json in Resources */,
 				4B8BE1C52BBF6B59002D3FC1 /* Localizable.xcstrings in Resources */,
 				4B7CA04229EFEADC00D769AC /* Preview Assets.xcassets in Resources */,
 				4BC20DC52A4A5371007F5313 /* EidAlAdhaAnimationData.json in Resources */,
+				4BF6729A2BC0F19A005A04BE /* PrivacyInfo.xcprivacy in Resources */,
 				4B7CA03F29EFEADC00D769AC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,23 +299,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BB5D2312BC192BF000C8CE5 /* PositionModifier.swift in Sources */,
 				4B5E4BD62BB06B880004432D /* SettingsView.swift in Sources */,
+				4BB5D22F2BC191CF000C8CE5 /* UIDeviceExtension.swift in Sources */,
 				4BC20DC32A4A3770007F5313 /* HomeView.swift in Sources */,
 				4B33145D2BBE139E00FA40EA /* SettingRowStatus.swift in Sources */,
 				4B7CA05429F023E700D769AC /* GlowBorder.swift in Sources */,
+				4BB5D2272BC18C88000C8CE5 /* Cache.swift in Sources */,
 				4B7CA03D29EFEADB00D769AC /* EidMubarakView.swift in Sources */,
+				4BB5D2232BC18C6C000C8CE5 /* CacheEntry.swift in Sources */,
 				4B73781C2BB78B6200225F9A /* AudioRowCell.swift in Sources */,
 				4B7CA04D29EFF12200D769AC /* EidMubarakViewModel.swift in Sources */,
 				4B77D98F29F1539B0025149F /* EidMedia.swift in Sources */,
 				4B7CA05629F0244D00D769AC /* MediaViewModel.swift in Sources */,
 				4B3F46DA2BB23DF0006F23B9 /* SoundViewModel.swift in Sources */,
+				4BB5D22B2BC18CB3000C8CE5 /* KeysTracker.swift in Sources */,
+				4BB5D2292BC18C9A000C8CE5 /* FileCache.swift in Sources */,
 				4BC20DC72A4A5662007F5313 /* EidButton.swift in Sources */,
 				4B73781E2BB78CFD00225F9A /* StatefulPreviewWrapper.swift in Sources */,
+				4BB5D22D2BC18EB5000C8CE5 /* DownloadManager.swift in Sources */,
 				4B49793A2BB5E7B400C20A2A /* AudioData.swift in Sources */,
 				4B7CA03B29EFEADB00D769AC /* AidElFitr2023App.swift in Sources */,
 				4B4979382BB5E71800C20A2A /* NetworkManager.swift in Sources */,
 				4B7CA05029F01D2500D769AC /* EidMubarakAudioPlayer.swift in Sources */,
 				4B43D4212BB6340400F533F8 /* APIError.swift in Sources */,
+				4BB5D2252BC18C7B000C8CE5 /* MemoryCache.swift in Sources */,
 				4B7CA04A29EFEFFB00D769AC /* Constants.swift in Sources */,
 				4B3F46D82BB23D98006F23B9 /* SettingsViewModel.swift in Sources */,
 			);
@@ -412,7 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AidElFitr2023/Preview Content\"";
 				DEVELOPMENT_TEAM = LX6HN92HPR;
 				ENABLE_PREVIEWS = YES;
@@ -423,6 +471,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -446,7 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AidElFitr2023/Preview Content\"";
 				DEVELOPMENT_TEAM = LX6HN92HPR;
 				ENABLE_PREVIEWS = YES;
@@ -457,6 +506,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

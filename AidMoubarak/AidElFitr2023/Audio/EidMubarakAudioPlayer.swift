@@ -10,37 +10,39 @@ import AVKit
 
 final class EidMubarakAudioPlayer {
     private var audioPlayer: AVAudioPlayer?
-    private var networkAudioPlayer: AVPlayer?
     private var audioRead = ""
     
     private func loadMP3Media(with audioFileName: String) {
-        // guard let fileName = URL(stringaudioFileName)
         print("Chargement du fichier audio \(audioFileName).mp3")
         
         var documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         documentsURL.appendPathComponent(audioFileName)
         
+        if FileManager().fileExists(atPath: documentsURL.path) {
+            print("Le fichier \(audioFileName) existe déjà.")
+        } else {
+            print("Lecture impossible de \(audioFileName)")
+            return
+        }
+        
         do {
-            self.audioPlayer = try AVAudioPlayer(contentsOf: documentsURL)
+            if audioFileName == "AlAfasyTV" {
+                guard let url = Bundle.main.url(forResource: "AlAfasyTV", withExtension: ".mp3") else {
+                    print("Erreur le fichier par défaut n'existe pas !")
+                    return
+                }
+                
+                self.audioPlayer = try AVAudioPlayer(contentsOf: url)
+            } else {
+                self.audioPlayer = try AVAudioPlayer(contentsOf: documentsURL)
+            }
         } catch {
             // failed to read directory – bad permissions, perhaps?
-            print("ERREUR: Fichier \(audioFileName).mp3 inexistant ou autre erreur \(error.localizedDescription)")
+            print("ERREUR: Fichier \(audioFileName) inexistant ou autre erreur \(error.localizedDescription)")
             return
         }
         
         print("Succès.")
-    }
-    
-    private func loadMP3MediaFromNetwork(with audioFileName: String) {
-        print("Téléchargement du fichier audio \(audioFileName).mp3")
-        
-        guard let url = URL(string: "http://kous92.free.fr/AudioData/EidTakbir/AlAfasyTV.mp3") else {
-            print("ERREUR: Fichier \(audioFileName).mp3 inexistant")
-            return
-        }
-        
-        let item = AVPlayerItem(url: url)
-        self.networkAudioPlayer = AVPlayer(playerItem: item)
     }
     
     init() {
@@ -58,27 +60,13 @@ final class EidMubarakAudioPlayer {
         }
         
         guard let audioPlayer else {
-            print("ERREUR: Lecture du fichier \(audioFileName).mp3 impossible.")
+            print("ERREUR: Lecture du fichier \(audioFileName) impossible.")
             return
         }
         
         print("Lecture du fichier MP3")
         audioRead = audioFileName
         audioPlayer.play()
-    }
-    
-    func playOnlineMP3Media(with audioFileName: String) {
-        if networkAudioPlayer == nil {
-            loadMP3MediaFromNetwork(with: audioFileName)
-        }
-        
-        guard let networkAudioPlayer else {
-            print("ERREUR: Lecture du fichier \(audioFileName).mp3 impossible.")
-            return
-        }
-        
-        print("Lecture du fichier MP3")
-        networkAudioPlayer.play()
     }
     
     func pauseMP3Media() {
@@ -88,15 +76,6 @@ final class EidMubarakAudioPlayer {
         
         print("Pause de la lecture du fichier MP3")
         audioPlayer.pause()
-    }
-    
-    func pauseOnlineMP3Media() {
-        guard let networkAudioPlayer else {
-            return
-        }
-        
-        print("Pause de la lecture du fichier MP3")
-        networkAudioPlayer.pause()
     }
     
     func stopMP3Media() {

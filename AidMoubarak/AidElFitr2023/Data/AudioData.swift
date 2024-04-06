@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct AudioData: Decodable {
+struct AudioData: Codable {
     let data: [AudioContent]
 }
 
-struct AudioContent: Decodable {
+struct AudioContent: Codable {
     let id: Int
     let audioFileURL: String
     let description: String

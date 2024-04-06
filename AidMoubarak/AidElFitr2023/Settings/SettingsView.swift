@@ -11,7 +11,7 @@ struct SettingsView: View {
     @Environment(\.dismiss) var dismiss
     
     @ObservedObject var viewModel: SettingsViewModel
-    @State private var number: Int = 1
+    @State private var number: Int = 0
     @State private var showingDownloadAlert = false
     
     var body: some View {
@@ -32,83 +32,102 @@ struct SettingsView: View {
                             .glowBorder(color: .black, lineWidth: 3)
                     }
                 }
-                .position(x: geometry.safeAreaInsets.leading + 30, y: geometry.safeAreaInsets.top - 15)
+                .position(x: geometry.safeAreaInsets.leading + 30, y: geometry.safeAreaInsets.top - setTopPositionWithDevice())
                 .zIndex(1)
                 
                 VStack(alignment: .center) {
-                    Text("Son du Takbir de l'Aïd")
+                    Text("eidTakbirSound")
                         .font(.system(size: 25))
                         .fontWeight(.medium)
                         .foregroundStyle(.image(Image("GoldFoil")))
                         .glowBorder(color: .black, lineWidth: 2)
                         .multilineTextAlignment(.center)
                 }
-                .position(x: geometry.size.width / 2, y: geometry.safeAreaInsets.top - 15)
+                .position(x: geometry.size.width / 2, y: geometry.safeAreaInsets.top - setTopPositionWithDevice())
             }
             
             VStack {
                 List {
-                    Picker("Sons disponibles", selection: $number) {
+                    Picker("availableSounds", selection: $number) {
                         ForEach(viewModel.audioViewModels) { audio in
-                            AudioRowCell(viewModel: audio, handler: { action in
-                                switch action {
-                                case .play:
-                                    print("Lecture de \(audio.soundName)")
-                                    viewModel.playAudio(with: audio)
-                                case .pause:
-                                    print("Pause de \(audio.soundName)")
-                                    viewModel.pauseAudio()
-                                case .download:
-                                    print("Lancement du téléchargement de \(audio.soundName)")
-                                    Task {
-                                        await viewModel.downloadAudio(with: audio)
-                                    }
-                                }
-                            })
+                            AudioRowCell(viewModel: audio) { setAction(with: $0, audio: audio) }
                             .tag(audio)
                         }
                         .onAppear {
-                            print("Actualisation de la vue")
-                            number = viewModel.isSelected + 1
+                            print("Actualisation de la vue. Élément \(number) sélectionné.")
+                            number = viewModel.isSelected
                         }
                     }
                     .pickerStyle(.inline)
                     .foregroundStyle(.image(Image("GoldFoil")))
                     .listRowBackground(Color(uiColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)))
-                    .pickerStyle(.inline)
                     .onChange(of: self.number) { newValue in
-                        print("\(viewModel.audioViewModels[newValue - 1].isDownloaded)")
+                        print("\(viewModel.audioViewModels[newValue].isDownloaded)")
                         Task {
-                            await viewModel.saveChoice(with: viewModel.audioViewModels[newValue - 1])
+                            await viewModel.saveChoice(with: viewModel.audioViewModels[newValue].audioFileName)
                         }
                     }
+                    
+                    Section() {
+                        if viewModel.isDownloading {
+                            Text(viewModel.downloadProgress)
+                                .font(.system(size: 15))
+                                .fontWeight(.medium)
+                                .foregroundStyle(.image(Image("GoldFoil")))
+                                .glowBorder(color: .black, lineWidth: 2)
+                                .multilineTextAlignment(.leading)
+                                .listRowBackground(Color(uiColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)))
+                        }
+                    }
+                    
                 }
                 .tint(.eidGold)
                 .scrollContentBackground(.hidden)
-                
-                if viewModel.isDownloading {
-                    Text(viewModel.downloadProgress)
-                        .font(.system(size: 25))
-                        .fontWeight(.medium)
-                        .foregroundStyle(.image(Image("GoldFoil")))
-                        .glowBorder(color: .black, lineWidth: 2)
+                .overlay {
+                    if viewModel.isFetching {
+                        ProgressView("syncInProgress")
+                            .font(.system(size: 20))
+                            .fontWeight(.medium)
+                            .foregroundStyle(.image(Image("GoldFoil")))
+                            .glowBorder(color: .black, lineWidth: 2)
+                            .multilineTextAlignment(.center)
+                            .progressViewStyle(CircularProgressViewStyle(tint: .eidGold))
+                    }
                 }
-            }
-            .overlay {
-                if viewModel.isFetching {
-                    ProgressView("Synchronisation en cours, veuillez patienter...")
-                        .font(.system(size: 20))
-                        .fontWeight(.medium)
-                        .foregroundStyle(.image(Image("GoldFoil")))
-                        .glowBorder(color: .black, lineWidth: 2)
-                        .multilineTextAlignment(.center)
-                        .progressViewStyle(CircularProgressViewStyle(tint: .eidGold))
+                .task {
+                    await viewModel.fetchAudioData()
                 }
+                .padding(.top, 70)
             }
-            .task {
-                await viewModel.fetchAudioData()
+        }
+    }
+}
+
+private extension SettingsView {
+    private func setAction(with status: SettingRowStatus, audio: SoundViewModel) {
+        switch status {
+        case .play:
+            print("Lecture de \(audio.soundName)")
+            viewModel.playAudio(with: audio)
+        case .pause:
+            print("Pause de \(audio.soundName)")
+            viewModel.pauseAudio()
+        case .download:
+            print("Lancement du téléchargement de \(audio.soundName)")
+            Task {
+                await viewModel.downloadAudio(with: audio)
             }
-            .padding(.top, 50)
+        }
+    }
+    
+    private func setTopPositionWithDevice() -> CGFloat {
+        switch UIDevice.current.interfaceType {
+        case .dynamicIsland:
+            return 40
+        case .notch:
+            return 30
+        case .none:
+            return 0
         }
     }
 }

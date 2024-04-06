@@ -24,7 +24,7 @@ struct AudioRowCell: View {
                     isPlaying ? pauseAction() : playAction()
                     isPlaying.toggle()
                 }, label: {
-                    Image(systemName: "\(isPlaying ? "pause.fill" : "play.fill" )")
+                    Image(systemName: "\("playpause.fill")")
                         .foregroundStyle(.image(Image("GoldFoil")))
                 })
             } else {
