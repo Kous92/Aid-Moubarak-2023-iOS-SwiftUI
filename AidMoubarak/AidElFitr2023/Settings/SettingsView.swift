@@ -13,6 +13,7 @@ struct SettingsView: View {
     @ObservedObject var viewModel: SettingsViewModel
     @State private var number: Int = 0
     @State private var showingDownloadAlert = false
+    @State private var showingErrorAlert = false
     
     var body: some View {
         ZStack {
@@ -22,7 +23,7 @@ struct SettingsView: View {
                 .zIndex(0)
             
             GeometryReader { geometry in
-                VStack {
+                HStack(alignment: .center) {
                     Button {
                         dismiss()
                     } label: {
@@ -31,17 +32,32 @@ struct SettingsView: View {
                             .font(.system(size: 40, weight: .semibold))
                             .glowBorder(color: .black, lineWidth: 3)
                     }
-                }
-                .position(x: geometry.safeAreaInsets.leading + 30, y: geometry.safeAreaInsets.top - setTopPositionWithDevice())
-                .zIndex(1)
-                
-                VStack(alignment: .center) {
+                    .padding(.leading, 20)
+                    
+                    Spacer()
                     Text("eidTakbirSound")
                         .font(.system(size: 25))
                         .fontWeight(.medium)
                         .foregroundStyle(.image(Image("GoldFoil")))
                         .glowBorder(color: .black, lineWidth: 2)
                         .multilineTextAlignment(.center)
+                    
+                    Spacer()
+                    Button {
+                        Task {
+                            do {
+                               try await viewModel.fetchAudioData(forceRefresh: true)
+                            } catch {
+                                showingErrorAlert.toggle()
+                            }
+                        }
+                    } label: {
+                        Image(systemName: "arrow.clockwise")
+                            .foregroundStyle(.image(Image("GoldFoil")))
+                            .font(.system(size: 30, weight: .semibold))
+                            .glowBorder(color: .black, lineWidth: 3)
+                    }
+                    .padding(.trailing, 20)
                 }
                 .position(x: geometry.size.width / 2, y: geometry.safeAreaInsets.top - setTopPositionWithDevice())
             }
@@ -57,13 +73,21 @@ struct SettingsView: View {
                             print("Actualisation de la vue. Élément \(number) sélectionné.")
                             number = viewModel.isSelected
                         }
+                        .alert(isPresented: $showingDownloadAlert, content: sendAlert)
                     }
                     .pickerStyle(.inline)
                     .foregroundStyle(.image(Image("GoldFoil")))
                     .listRowBackground(Color(uiColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)))
                     .onChange(of: self.number) { newValue in
-                        print("\(viewModel.audioViewModels[newValue].isDownloaded)")
                         Task {
+                            guard viewModel.audioViewModels[newValue].isDownloaded else {
+                                print("Le son n'est pas téléchargé.")
+                                showingDownloadAlert.toggle()
+                                number = 0
+                                await viewModel.saveChoice(with: viewModel.audioViewModels[0].audioFileName)
+                                return
+                            }
+                            
                             await viewModel.saveChoice(with: viewModel.audioViewModels[newValue].audioFileName)
                         }
                     }
@@ -95,8 +119,15 @@ struct SettingsView: View {
                     }
                 }
                 .task {
-                    await viewModel.fetchAudioData()
+                    do {
+                       try await viewModel.fetchAudioData()
+                    } catch {
+                        showingErrorAlert.toggle()
+                    }
                 }
+                .alert(isPresented: $showingErrorAlert, content: {
+                    sendNetworkErrorAlert()
+                })
                 .padding(.top, 70)
             }
         }
@@ -129,6 +160,14 @@ private extension SettingsView {
         case .none:
             return 0
         }
+    }
+    
+    private func sendAlert() -> Alert {
+        Alert(title: Text("error"), message: Text("fileNotDownloaded"))
+    }
+    
+    private func sendNetworkErrorAlert() -> Alert {
+        Alert(title: Text("error"), message: Text("viewModel.errorMessage"))
     }
 }
 

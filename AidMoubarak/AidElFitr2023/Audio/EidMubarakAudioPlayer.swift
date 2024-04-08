@@ -22,11 +22,10 @@ final class EidMubarakAudioPlayer {
             print("Le fichier \(audioFileName) existe déjà.")
         } else {
             print("Lecture impossible de \(audioFileName)")
-            return
         }
         
         do {
-            if audioFileName == "AlAfasyTV" {
+            if audioFileName == "AlAfasyTV" || audioFileName.isEmpty {
                 guard let url = Bundle.main.url(forResource: "AlAfasyTV", withExtension: ".mp3") else {
                     print("Erreur le fichier par défaut n'existe pas !")
                     return

@@ -25,8 +25,9 @@ final class EidMubarakViewModel: ObservableObject {
     func playAudioMedia() {
         let selectedSoundName = getSelectedSoundName()
         
-        guard !selectedSoundName.isEmpty else {
-            print("Erreur, aucun son a été sélectionné.")
+        if selectedSoundName.isEmpty {
+            print("Erreur, aucun son a été sélectionné. Le son par défaut sera séléctionné.")
+            audioPlayer.playMP3Media(with: "")
             return
         }
         

@@ -18,16 +18,21 @@ final class NetworkManager {
         }
     }
     
-    func fetchAudioData() async throws -> [AudioContent] {
+    func fetchAudioData(forceRefresh: Bool = false) async throws -> [AudioContent] {
         cacheKey = "sounds"
-        print("[NetworkManager] Checking cached data for key: \(cacheKey)")
         
-        if let audioContent = await soundCache.value(key: cacheKey) {
-            print("[NetworkManager] Cached data found, \(audioContent.count) sounds available. Skipping download process.")
-            return audioContent
+        print("[NetworkManager] Refresh data: \(forceRefresh ? "Enabled": "Disabled")")
+        
+        if forceRefresh == false {
+            print("[NetworkManager] Checking cached data for key: \(cacheKey)")
+            if let audioContent = await soundCache.value(key: cacheKey) {
+                print("[NetworkManager] Cached data found, \(audioContent.count) sounds available. Skipping download process.")
+                return audioContent
+            }
+            
+            print("[NetworkManager] No data in cache for \(cacheKey)")
         }
         
-        print("[NetworkManager] No data in cache for \(cacheKey)")
         
         guard let url = URL(string: "http://kous92.free.fr/api/EidTakbirAudioData.php") else {
             throw APIError.invalidURL

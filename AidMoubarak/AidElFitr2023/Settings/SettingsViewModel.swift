@@ -14,21 +14,24 @@ final class SettingsViewModel: ObservableObject {
     @Published var isDownloading = false
     @Published var downloadProgress = ""
     @Published var isSelected = 0
+    @Published var errorMessage = ""
     
     private let audioPlayer = EidMubarakAudioPlayer()
     private let networkManager = NetworkManager()
     private var playingAudio = ""
     
-    func fetchAudioData() async {
+    func fetchAudioData(forceRefresh: Bool = false) async throws {
         print("Téléchargement des données")
+        audioViewModels.removeAll()
         isFetching = true
         
         do {
-            let data = try await networkManager.fetchAudioData()
+            let data = try await networkManager.fetchAudioData(forceRefresh: forceRefresh)
             await setDefaultAudio()
             await parseViewModels(with: data)
-        } catch {
-            print("ERREUR")
+        } catch APIError.networkError {
+            errorMessage = APIError.networkError.rawValue
+            throw APIError.networkError
         }
     }
     
